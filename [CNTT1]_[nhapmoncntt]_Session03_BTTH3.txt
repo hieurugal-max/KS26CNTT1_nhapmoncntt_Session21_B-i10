@@ -1,0 +1,62 @@
+BÀI 3: THIẾT KẾ HỆ THỐNG IoT THÔNG MINH VÀ QUẢN LÝ CẤU HÌNH
+
+1. THIẾT KẾ 4 TẦNG DIKW
+
+Tầng 1 – Data (Dữ liệu):
+Hệ thống thu thập dữ liệu từ các cảm biến như nhiệt độ, độ ẩm và thời tiết.
+
+Tầng 2 – Information (Thông tin):
+Hệ thống xử lý dữ liệu và gửi thông báo cho chủ vườn khi điều kiện môi trường thay đổi.
+
+Tầng 3 – Knowledge (Tri thức):
+Hệ thống dựa vào dữ liệu đã xử lý để tự động bật máy bơm khi nhiệt độ lớn hơn 35°C.
+
+Tầng 4 – Wisdom (Trí tuệ):
+Hệ thống kết hợp dữ liệu hiện tại với dự báo thời tiết dài hạn để điều chỉnh lượng nước tưới và tránh lãng phí.
+
+
+2. QUẢN LÝ FILE CẤU HÌNH
+
+File .env chứa các thông tin quan trọng như mật khẩu kết nối máy bơm. Đây là file ẩn nên cần bật Hidden Items để kiểm tra và tránh xóa nhầm.
+
+Thư mục .git cũng là thư mục ẩn dùng để lưu thông tin quản lý Git. Không nên tự ý xóa các file hoặc thư mục ẩn khi chưa kiểm tra.
+
+
+3. TÍNH DUNG LƯỢNG LƯU TRỮ
+
+Hệ thống tạo ra 50 MB dữ liệu mỗi ngày.
+
+Trong 1 năm:
+
+50 × 365 = 18.250 MB = 18,25 GB
+
+Do chỉ được sử dụng tối đa 70% dung lượng ổ đĩa:
+
+18,25 ÷ 0,7 ≈ 26,07 GB
+
+Vậy cần ổ đĩa có dung lượng ít nhất khoảng 27 GB.
+
+
+4. TỐI ƯU HỆ THỐNG IoT
+
+Có thể xử lý dữ liệu trực tiếp trên chip SoC thay vì gửi toàn bộ dữ liệu lên máy chủ. Chỉ gửi dữ liệu cần thiết hoặc dữ liệu cảnh báo. Đồng thời sử dụng chế độ tiết kiệm điện khi hệ thống không hoạt động.
+
+
+5. SƠ ĐỒ DIKW
+
+Cảm biến
+↓
+Data
+↓
+Information
+↓
+Knowledge
+↓
+Wisdom
+↓
+Điều khiển trang trại
+
+
+KẾT LUẬN
+
+Mô hình DIKW giúp hệ thống biến dữ liệu cảm biến thành thông tin, tri thức và quyết định. Việc quản lý file ẩn, dung lượng lưu trữ và tối ưu SoC giúp hệ thống hoạt động ổn định và tiết kiệm tài nguyên.
